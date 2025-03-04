@@ -1,0 +1,120 @@
+index.html<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Game</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <header>
+        <h1>The Guessing Game</h1>
+        <div class="nav">
+            <button>
+                <p class="toPlay">How To Play</p>
+            </button>
+            <button>
+                <p class="toRecord">Record</p>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="section1">
+            
+            <div class="dInputsSect">
+                <h3>Enter A number Between 1 - 100</h3>
+                <div class="toInput">
+
+                    <input type="number" name="dInputs" id="dInputs">
+
+                    <button id="btnEnter">Enter</button>
+                </div>
+            </div>
+            <div class="data">
+                <div class="data1">
+                    <div class="enteredNmu">
+                        <div class="group1">
+                            <p>Number Entered:</p>
+                            <b class="theNum">00</b>
+                        </div>
+                        <p class="highLow">Uncertain</p>
+                    </div>
+                    <div class="enteredNmu ">
+                        <div class="group1">
+                            <p>Chances Left:</p>
+                            <b class="chancesLeft">10</b>  
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="feedback">
+                <div class="win">
+                    <b>YESSS - You Win</b>
+                    <b class="b1">Congratulations !!!!!!!</b>
+                </div>
+                <div class="lose">
+                    <b>Oh No</b>
+                    <b class="b1">You Lose !!!!!!!</b>
+                </div>
+                <div class="data2">
+                        <p>Answer </p>
+                        <b class="dAnswer">00</b>
+                </div>
+            </div>
+
+            <button id="reset">Reset</button>
+
+        </section>
+
+        <aside>
+                <div class="hw2play">
+                    <div class="dHead">
+                        <h3>How To Play</h3>
+                        <b class="xClose">X</b>
+                    </div>
+
+                    <ul class="howToPlay">
+                        <li><b class="blk">1st: </b>You click on Enter</li>
+                        <li><b class="blk">Next: </b>You Enter a number between 1 - 100</li>
+                        <li><b class="blk">Note:</b>You’ll have 10 chances to choose the correct option</li>
+                    </ul>
+                    <hr>
+                    <ul class="howToPlay2">
+                        <li>If you get the correct number before or by the 10th trial,  <b>"You WIN"</b></li>
+                        <li>If not, <b>"You LOSE"</b> </li>
+                        <li><b class="blk">Note:</b> The best possible outcome is to get it in the first trial with the outcome as 1 or 100</li>
+                    </ul>
+                    <hr>
+                    <h3 class="enjoy">ENJOY</h3>
+                </div> 
+                            
+                <div class="record">
+                    <div class="dHead">
+                        <h3>Record<span></span></h3>
+                        <b class="xClose">X</b>
+                    </div>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Trial</th>
+                                <th>Entered</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+        </aside>
+
+    </main>
+    <footer class="footer">
+        <p>&copy; 2025. Michael One MDN Project</p>
+    </footer>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
