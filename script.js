@@ -57,7 +57,7 @@ cell1.textContent = Number(dI);
 cell2.textContent = Number(dNum);
 tabRow.appendChild(cell1);
 tabRow.appendChild(cell2);
-tbody.appendChild(tabRow);
+tbody.prepend(tabRow);
 }
 
 /**
