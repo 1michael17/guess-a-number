@@ -1,407 +1,449 @@
 * {
-font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-margin: 0%;
-padding: 0%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0%;
+    padding: 0%;
 }
 
 body {
-background: #EDE8FF;
-min-height: 100vh;
-display: flex;
-flex-direction: column;
+    background: #EDE8FF;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* ********************** *Header Section */
 
 header {
-width: 100%;
-height: 64px;
-background: linear-gradient(0deg, #00000099, #00000099), linear-gradient(270deg, #300AA2 0%, #613EFB 36%, #000645 99.99%);
-display: flex;
-justify-content: center;
-align-items: center;
+    width: 100%;
+    height: 64px;
+    background: linear-gradient(0deg, #00000099, #00000099), linear-gradient(270deg, #300AA2 0%, #613EFB 36%, #000645 99.99%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 header h1 {
-font-weight: 700;
-font-size: 28px;
-color: #FFFFFF;
+    font-weight: 700;
+    font-size: 28px;
+    color: #FFFFFF;
 }
 
 .nav {
-height: 48px;
-width: 220px;
-display: flex;
-position: absolute;
-right: 5%;
-justify-content: space-between;
-align-items: center;
+    height: 48px;
+    width: 220px;
+    display: flex;
+    position: absolute;
+    right: 5%;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .nav button {
-height: 36px;
-width: 45%;
-background: #300AA2;
-border: none;
-cursor: pointer;
-color: #fffbfb;
-font-size: 16px;
-display: flex;
-justify-content: center;
-align-items: center;
+    height: 36px;
+    width: 45%;
+    background: #300AA2;
+    border: none;
+    cursor: pointer;
+    color: #fffbfb;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav button:hover {
-transition: 200ms;
-background-color: #300aa250;
+    transition: 200ms;
+    background-color: #300aa250;
 }
 
 .nav button:active {
-transition: 200ms;
-font-size: 15px;
-border: solid 1px #300AA2;
+    transition: 200ms;
+    font-size: 15px;
+    border: solid 1px #300AA2;
 }
 
 /* ***** *Main > Section .section1 > The input div */
 main {
-width: fit-content;
-display: flex;
-justify-content: space-evenly;
-border: outset 2px #930909;;
-border-radius: 1%;
-flex: 1;
-margin: 40px auto;
+    width: fit-content;
+    /* height: min-content; */
+    display: flex;
+    justify-content: space-evenly;
+    border: outset 2px #930909;
+    border-radius: 1%;
+    flex: 1;
+    margin: 40px auto;
 }
 
 .section1 {
-width: 480px;
-border: inset 3px silver;
-display: flex;
-flex-direction: column;
-gap: 40px;
-box-sizing: border-box;
-padding-bottom: 20px;
+    width: 480px;
+    border: inset 3px silver;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    box-sizing: border-box;
+    padding-bottom: 20px;
 }
 
 .dInputsSect {
-padding: 10px;
-text-align: center;
-display: block;
+    padding: 10px;
+    text-align: center;
+    display: block;
 }
 
 .toInput {
-display: flex;
-justify-content: space-around;
+    display: flex;
+    justify-content: space-around;
 }
 
 input {
-width: 50%;
-height: 50px;
-font-size: 20px;
-text-align: center;
-font-weight: bold;
-border: solid 2px silver;
+    width: 50%;
+    height: 50px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    border: solid 2px silver;
 }
 
 .dInputsSect #btnEnter,
 #reset {
-width: 150px;
-height: 50px;
-font-size: 20px;
-font-weight: 800;
-background-color: #930909;
-border: solid 2px #930909;
-border-radius: 20px;
-color: white;
-cursor: pointer;
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 800;
+    background-color: #930909;
+    border: solid 2px #930909;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
 }
 
 .dInputsSect #btnEnter:hover,
 #reset:hover {
-transition: 100ms;
-background-color: transparent;
-border: solid 2px #930909;
-color: black;
+    transition: 100ms;
+    background-color: transparent;
+    border: solid 2px #930909;
+    color: black;
 }
 
 #reset {
-display: block;
-width: 90%;
-text-align: center;
-margin: 0px auto;
+    display: block;
+    width: 90%;
+    text-align: center;
+    margin: 0px auto;
 }
 
 .section1 h3 {
-font-size: 20px;
-padding: 30px;
+    font-size: 20px;
+    padding: 30px;
 }
 
 /* *********** *Main > Section .section1 > .data */
 
 .data,
 .feedback {
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .data1 {
-padding: 30px 0px 0px;
-width: 90%;
-margin: 1px auto;
-box-sizing: border-box;
+    padding: 30px 0px 0px;
+    width: 90%;
+    margin: 1px auto;
+    box-sizing: border-box;
 }
 
 .data1 .enteredNmu {
-border: solid 1px silver;
-display: flex;
-justify-content: start;
-align-items: center;
-gap: 20px;
-background-color: #D5D1E5;
-height: 40px;
-padding: 0px 5%;
+    border: solid 1px silver;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    background-color: #D5D1E5;
+    height: 40px;
+    padding: 0px 5%;
 }
 
 .data1 .enteredNmu:nth-child(1) {
-margin-bottom: 2%;
+    margin-bottom: 2%;
 }
 
 .data1 .enteredNmu p,
 .data2 p {
-font-size: 18px;
-font-weight: bold;
-color: #000000be;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000be;
 }
 
 .data1 .enteredNmu b {
-font-size: 18px;
-color: #000000;
+    font-size: 18px;
+    color: #000000;
 }
 
 .theNum {
-background-color: #ffff0046;
+    background-color: #ffff0046;
 }
 
 .group1 {
-width: 70%;
-display: flex;
-justify-content: space-between;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .data1 .enteredNmu p.highLow {
-display: block;
-text-align: right;
-width: 24%;
-color: black;
+    display: block;
+    text-align: right;
+    width: 24%;
+    color: black;
 }
 
 /* *********** *Main > Section .section1 > .data2 */
 
 .data2 {
-display: flex;
-flex-direction: row;
-justify-content: space-around;
-align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 
-width: 90%;
-background: linear-gradient(90deg, #0a3101e6 0%, #1df71a 100%);
-height: 50px;
-box-sizing: border-box;
+    width: 90%;
+    background: linear-gradient(90deg, #0a3101e6 0%, #1df71a 100%);
+    height: 50px;
+    box-sizing: border-box;
 }
 
 .data2 p {
-display: block;
-font-size: 24px;
-color: #000000;
+    display: block;
+    font-size: 24px;
+    color: #000000;
 }
 
 .data2 b:last-child {
-display: block;
-font-size: 28px;
-width: 30%;
-margin: auto 0px;
+    display: block;
+    font-size: 28px;
+    width: 30%;
+    margin: auto 0px;
 }
 
 .win,
 .lose {
-width: 90%;
-height: 112px;
-margin: 10px auto;
-text-align: center;
+    width: 90%;
+    height: 112px;
+    margin: 10px auto;
+    text-align: center;
 
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
 }
 
 .feedback b {
-display: block;
-font-size: 20px;
-color: #000000;
-height: 30px;
-margin-top: 2%;
+    display: block;
+    font-size: 20px;
+    color: #000000;
+    height: 30px;
+    margin-top: 2%;
 }
 
 .feedback .b1 {
-display: block;
-font-size: 24px;
-color: white;
-height: 36px;
+    display: block;
+    font-size: 24px;
+    color: white;
+    height: 36px;
 }
 
 .win {
-background: linear-gradient(86.51deg, #eec5c5 0%, #D62424 21%, #33CA25 49%, #1DAA26 72.5%, #251484 100%);
-border: 4px solid #E67817;
+    background: linear-gradient(86.51deg, #eec5c5 0%, #D62424 21%, #33CA25 49%, #1DAA26 72.5%, #251484 100%);
+    border: 4px solid #E67817;
 }
 
 .lose {
-background: radial-gradient(35.42% 241.07% at 50% 50%, #CE0003 0%, #680002 100%);
-border: 4px solid #bb1212;
+    background: radial-gradient(35.42% 241.07% at 50% 50%, #CE0003 0%, #680002 100%);
+    border: 4px solid #bb1212;
+}
+
+.aside1 {
+    width: 50%;
+    border: solid 1px silver;
+    border-radius: 4px;
+    font-size: 20px;
+    text-align: center;
+    padding: 2% 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0px auto -10%;
+    position: relative;
+    bottom: 10%;
+    background-color: #ffffff;
+    box-shadow: 4px 2px 2px 2px #6161619c;
+}
+
+.aside1 button {
+    width: 40%;
+    padding: 2%;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #720707;
+    color: white;
+    border: none;
+}
+
+.btns {
+    width: 100%;
+    margin-top: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btns button:nth-child(1) {
+    background-color: transparent;
+    border: solid 2px #720707;
+    color: black;
 }
 
 /* *********** *Main > Aside (How to Play & Record*/
 
 aside {
-width: 360px;
-border: 2px solid silver;
-height: fit-content;
-padding: 10px 0px;
+    width: 360px;
+    border: 2px solid silver;
+    height: fit-content;
+    height: inherit;
+    padding: 10px 0px;
 }
 
 .hw2play {
-display: flex;
-flex-direction: column;
-justify-content: space-evenly;
-align-items: center;
-gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
 }
 
 .dHead {
-width: 90%;
-height: 48px;
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: space-between;
-margin: 0px auto;
-box-sizing: border-box;
-border-bottom: solid 1px silver;
+    width: 90%;
+    height: 48px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px auto;
+    box-sizing: border-box;
+    border-bottom: solid 1px silver;
 }
 
 .dHead h3,
 .enjoy {
-display: inline-block;
-width: 80%;
-text-align: center;
+    display: inline-block;
+    width: 80%;
+    text-align: center;
 }
 
 .dHead .xClose {
-display: block;
-width: 10%;
-background-color: white;
-text-align: center;
-line-height: 200%;
-border-radius: 100%;
-cursor: pointer;
+    display: block;
+    width: 10%;
+    background-color: white;
+    text-align: center;
+    line-height: 200%;
+    border-radius: 100%;
+    cursor: pointer;
 }
 
 hr {
-width: 95%;
+    width: 95%;
 }
 
 /* ************** Record */
 
 .howToPlay,
 .howToPlay2 {
-width: 90%;
-height: max-content;
-list-style-type: none;
-display: flex;
-flex-direction: column;
-gap: 10px;
-padding: 10px;
+    width: 90%;
+    height: max-content;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
 }
 
 .howToPlay .blk,
 .howToPlay2 .blk {
-display: inline-block;
-width: 50px;
+    display: inline-block;
+    width: 50px;
 }
 
 /* ************** Record */
 
 .record {
-display: flex;
-flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .record .dHead {
-border: none;
+    border: none;
 }
 
 table {
-table-layout: auto;
-width: 80%;
-margin: 0px auto;
-border-collapse: collapse;
+    table-layout: auto;
+    width: 80%;
+    margin: 0px auto;
+    border-collapse: collapse;
 }
 
 thead,
 tbody {
-width: 50%;
-border: solid 2px gold;
+    width: 50%;
+    border: solid 2px gold;
 }
 
 th {
-text-align: left;
-background: #b7a0fa;
+    text-align: left;
+    background: #b7a0fa;
 }
 
 td,
 th {
-width: 40%;
-border: solid 2px silver;
-padding: 5px;
+    width: 40%;
+    border: solid 2px silver;
+    padding: 5px;
 }
 
 tbody tr:nth-child(odd) {
-background-color: #EDE8FF;
-;
+    background-color: #EDE8FF;
+    ;
 }
 
 tbody tr:nth-child(even) {
-background-color: #dad5f1;
+    background-color: #dad5f1;
 }
 
 /* **** To display NONE */
 
 aside {
-display: flex;
-flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .hw2play {
-display: flex;
+    display: flex;
 }
 
 /* ************** Record */
 
 footer {
-width: 100%;
-height: 40px;
-left: 0px;
-background: linear-gradient(0deg, #00000099, #00000099), linear-gradient(270deg, #300AA2 0%, #613EFB 36%, #000645 99.99%);
+    width: 100%;
+    height: 40px;
+    left: 0px;
+    background: linear-gradient(0deg, #00000099, #00000099), linear-gradient(270deg, #300AA2 0%, #613EFB 36%, #000645 99.99%);
 
-position: relative;
-bottom: 0%;
+    position: relative;
+    bottom: 0%;
 
-display: flex;
-flex-direction: row;
-justify-content: space-around;
-align-items: center;
-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
 }

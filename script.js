@@ -6,8 +6,11 @@ const theNum = document.querySelector('.theNum');
 const dAnswer = document.querySelector('.dAnswer');
 const chancesLeft = document.querySelector('.chancesLeft');
 const highLow = document.querySelector('.highLow');
+const yes = document.querySelector('.yes');
+const no = document.querySelector('.no');
 
 const dI = document.querySelector('.toPlay');
+const aside1 = document.querySelector('.aside1');
 const toRecord = document.querySelector('.toRecord');
 const btnEnter = document.querySelector('#btnEnter');
 const resetBtn = document.querySelector('#reset');
@@ -23,21 +26,23 @@ const tbody = document.querySelector('tbody');
 /**
 * * ****************Global Variables
 */
-let numEntered = dInputs.value;
+let enteredNum = Number(dInputs.value);
 let chanceLeft = 10;
 let counter = 0;
 let randomNum = Number(Math.floor(Math.random() * 100 + 1));
 let inDisStyle = window.getComputedStyle(dInputsSect).display;
+let aside1Display = window.getComputedStyle(aside1).display;
 dInputs.focus();
 
 /**
 * * ****************Initial display 'none'
 */
 dAside.style.display = 'none';
+aside1.style.display = 'none';
 feedback.style.display = 'none';
 resetBtn.style.display = 'none';
 
-console.log(randomNum);
+console.log(randomNum); 
 
 function recordTrack(dI, dNum) {
     let tabRow = document.createElement('tr');
@@ -66,10 +71,11 @@ function recordTrack(dI, dNum) {
 */
 // *The 'Play function for (Enter Btn)'
 function playBtn() {
-    let enteredNum = Number(dInputs.value);
-
+    enteredNum = Number(dInputs.value);
+    
     if (enteredNum > 0 && enteredNum <= 100) {
         resetBtn.style.display = 'block';
+        aside1.style.display = 'none';
 
         chanceLeft--;
         counter++;
@@ -112,7 +118,7 @@ function playBtn() {
             highLow.textContent = 'High Guess';
         }
         inDisStyle = window.getComputedStyle(dInputsSect).display;
-        console.log(inDisStyle);
+        dInputs.focus();
     }
     else {
         dInputs.value = "";
@@ -122,32 +128,31 @@ function playBtn() {
 
 // *The 'Reset function for (Reset / Try or Play Again Btn)'
 function resetGame() {
-    dInputsSect.style.display = 'block';
-    feedback.style.display = 'none';
-    resetBtn.style.display = 'none';
-
-    resetBtn.textContent = 'Reset';
-    tbody.textContent = '';
-    highLow.textContent = 'Uncertain ';
-    theNum.textContent = '00';
-    chancesLeft.textContent = '00';
-
-    dInputs.value = "";
-    randomNum = Number(Math.floor(Math.random() * 100 + 1));
-    console.log(randomNum);
-
-    dInputs.focus();
-
-    chanceLeft = 10;
-    counter = 0;
-}
-
-// *The 'Close BTN'
-for (let i = 0; i < toClose.length; i++) {
-    toClose[i].addEventListener('click', e => {
-        dAside.style.display = 'none';
-        console.log(chanceLeft);
-    });
+    if((randomNum === enteredNum || chanceLeft < 1 && randomNum != enteredNum) && (chanceLeft = 10)){
+        dInputsSect.style.display = 'block';
+        feedback.style.display = 'none';
+        resetBtn.style.display = 'none';
+        aside1.style.display = 'none';
+    
+        resetBtn.textContent = 'Reset';
+        tbody.textContent = '';
+        highLow.textContent = 'Uncertain ';
+        theNum.textContent = '00';
+        chancesLeft.textContent = '00';
+    
+        dInputs.value = "";
+        randomNum = Number(Math.floor(Math.random() * 100 + 1));
+        console.log(randomNum);
+    
+        dInputs.focus();
+    
+        chanceLeft = 10;
+        counter = 0;
+    }
+    else{
+        aside1.style.display = 'flex';
+        resetBtn.style.display = 'none';
+    }
 }
 
 // *The 'To display 'Record/How to play'
@@ -163,27 +168,39 @@ const toDisplay = (e, m) => {
     console.log(m.className);
 }
 
-/**
-* * ******* addEventListeners Section********
-*/
+//* * **** ADDEVENTLISTENER Section********* * ***/
+
 // *The Play Button'
 btnEnter.addEventListener('click', playBtn);
-
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {
-        if (inDisStyle === 'block' || dInputsSect.style.display === 'block') {
-            playBtn();
-        } else {
-            resetGame();
-            console.log(`for Block = else if`, inDisStyle);
-        }
+        if (inDisStyle === 'block'|| chanceLeft == 10) playBtn();
+        else resetGame();
     }
 })
 
 // *The Reset Button'
 resetBtn.addEventListener('click', resetGame);
+yes.addEventListener('click', ()=>{
+    chanceLeft = 0;
+    resetGame();
+});
+no.addEventListener('click', ()=>{
+    aside1.style.display = 'none';
+    resetBtn.style.display = 'block';
+    playBtn();
+});
+dInputs.addEventListener("input",()=>{aside1.style.display='none';});
 
-// *The View Record'
+// *The 'Close BTN'
+for (let i = 0; i < toClose.length; i++) {
+    toClose[i].addEventListener('click', e => {
+        dAside.style.display = 'none';
+        console.log(chanceLeft);
+    });
+}
+
+// *The View How to Play'
 dI.addEventListener('click', () => {
     toDisplay(dAside, hw2play);
 });
