@@ -128,7 +128,7 @@ function playBtn() {
 
 // *The 'Reset function for (Reset / Try or Play Again Btn)'
 function resetGame() {
-    if((randomNum === enteredNum || chanceLeft < 1 && randomNum != enteredNum) && (chanceLeft = 10)){
+    if(randomNum === enteredNum || chanceLeft < 1 && randomNum != enteredNum){
         dInputsSect.style.display = 'block';
         feedback.style.display = 'none';
         resetBtn.style.display = 'none';
@@ -138,7 +138,7 @@ function resetGame() {
         tbody.textContent = '';
         highLow.textContent = 'Uncertain ';
         theNum.textContent = '00';
-        chancesLeft.textContent = '00';
+        chancesLeft.textContent = '10';
     
         dInputs.value = "";
         randomNum = Number(Math.floor(Math.random() * 100 + 1));
